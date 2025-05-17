@@ -1,0 +1,13 @@
+services:
+  ai-3d-webapp:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - DEEPSEEK_API_KEY=
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+      - /app/node_modules
